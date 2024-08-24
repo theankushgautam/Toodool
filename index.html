@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toodool</title>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <header class="header">
+      <h2>Toodool</h2>
+      <button id="createNewProjectButton">+ NEW PROJECT</button>
+    </header>
+
+    <div id="container">
+      <dialog id="todo-form">
+        <button id="closeForm">&times;</button>
+        <div class="todo-container">
+          <input type="text" placeholder="Project Title" id="project-title" />
+          <input type="text" placeholder="+ New Item" id="todo-item" />
+        </div>
+        <button id="saveButton">Save</button>
+      </dialog>
+    </div>
+
+    <!-- //container for our todo-list display -->
+    <main class="main-container"></main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
