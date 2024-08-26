@@ -5,44 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toodool</title>
 
+    <!-- GOOGLE MATERIAL ICONS  -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
   <script defer src="bundle.js"></script></head>
   <body class="light-mode">
+    <!-- HEADER  -->
     <header class="header">
       <h2>Toodool</h2>
-
       <div class="header-right">
         <button id="new-project-btn">+ NEW PROJECT</button>
-        <button id="mode-toggle">Theme</button>
+        <button id="mode-toggle">
+          <span class="material-symbols-outlined dark-mode-icon"
+            >dark_mode</span
+          >
+        </button>
       </div>
     </header>
 
+    <!-- DIALOG MODAL FOR INPUT -->
     <div id="container">
       <dialog id="todo-form">
-        <button id="close-form-btn">&times;</button>
+        <!-- close button -->
+        <button id="close-form-btn">
+          <span class="material-symbols-outlined dark-mode-icon">close</span>
+        </button>
+
         <div class="todo-container">
+          <!-- project title -->
           <input type="text" placeholder="Project Title" id="project-title" />
 
-          <div class="todo-item-row">
-            <span class="material-symbols-outlined">
-              check_box_outline_blank
-            </span>
-            <input type="text" placeholder="+ New Item" id="todo-item" />
-            <span id="delete-todo-item" class="material-symbols-outlined">
-              delete
-            </span>
+          <div class="todo-items-container">
+            <div class="todo-item-row">
+              <!-- checkbox -->
+              <!-- <span class="material-symbols-outlined">
+                check_box_outline_blank
+              </span> -->
+
+              <!-- <input type="text" placeholder="+ New Item" id="todo-item" />
+
+              
+               <span id="delete-todo-item" class="material-symbols-outlined">
+                delete
+              </span> -->
+            </div>
           </div>
         </div>
+
+        <!-- save button -->
         <button id="save-btn">Save</button>
       </dialog>
     </div>
 
-    <!-- //container for our todo-list display -->
+    <!-- MAIN BODY FOR DISPLAYING TODO LISTS -->
     <main class="main-container"></main>
 
+    <!-- JS MODULE -->
     <script src="index.js"></script>
   </body>
 </html>
