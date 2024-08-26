@@ -4,25 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toodool</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   <script defer src="bundle.js"></script></head>
   <body class="light-mode">
     <header class="header">
       <h2>Toodool</h2>
 
       <div class="header-right">
-        <button id="createNewProjectButton">+ NEW PROJECT</button>
+        <button id="new-project-btn">+ NEW PROJECT</button>
         <button id="mode-toggle">Theme</button>
       </div>
     </header>
 
     <div id="container">
       <dialog id="todo-form">
-        <button id="closeForm">&times;</button>
+        <button id="close-form-btn">&times;</button>
         <div class="todo-container">
           <input type="text" placeholder="Project Title" id="project-title" />
-          <input type="text" placeholder="+ New Item" id="todo-item" />
+
+          <div class="todo-item-row">
+            <span class="material-symbols-outlined">
+              check_box_outline_blank
+            </span>
+            <input type="text" placeholder="+ New Item" id="todo-item" />
+            <span id="delete-todo-item" class="material-symbols-outlined">
+              delete
+            </span>
+          </div>
         </div>
-        <button id="saveButton">Save</button>
+        <button id="save-btn">Save</button>
       </dialog>
     </div>
 
