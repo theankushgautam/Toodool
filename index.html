@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toodool</title>
   <script defer src="bundle.js"></script></head>
-  <body>
+  <body class="light-mode">
     <header class="header">
       <h2>Toodool</h2>
-      <button id="createNewProjectButton">+ NEW PROJECT</button>
+
+      <div class="header-right">
+        <button id="createNewProjectButton">+ NEW PROJECT</button>
+        <button id="mode-toggle">Theme</button>
+      </div>
     </header>
 
     <div id="container">
