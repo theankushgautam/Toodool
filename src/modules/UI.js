@@ -16,6 +16,9 @@ export class UI {
   //display retrived data from storage on refresh
   static displayRetrieveTodos() {
     const todoObject = Storage.retrieveAllTodos();
+
+    if (todoObject == {}) return; //if no items exit
+
     const todoArray = Object.values(todoObject);
 
     todoArray.forEach((todo) => {
