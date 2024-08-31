@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toodool</title>
+    <meta
+      name="description"
+      content="A minimalistic Todo App. Your simple ToodooL."
+    />
+    <title>ToodooL</title>
 
     <!-- GOOGLE MATERIAL ICONS  -->
     <link
@@ -12,57 +16,64 @@
     />
   <script defer src="bundle.js"></script></head>
   <body class="light-mode">
-    <!-- HEADER  -->
+    <!-- 
+    ========================HEADER  
+    -->
     <header class="header">
-      <h2>Toodool</h2>
+      <h2>ToodooL</h2>
       <div class="header-right">
-        <button id="new-project-btn">+ NEW PROJECT</button>
-        <button id="mode-toggle">
-          <span class="material-symbols-outlined dark-mode-icon"
-            >dark_mode</span
-          >
-        </button>
+        <button id="new-todo-btn">+ New Todo</button>
+        <span class="material-symbols-outlined icon" id="mode-toggle">
+          dark_mode
+        </span>
       </div>
     </header>
 
-    <!-- DIALOG MODAL FOR INPUT -->
-    <div id="container">
-      <dialog id="todo-form">
-        <!-- close button -->
-        <button id="close-form-btn">
-          <span class="material-symbols-outlined dark-mode-icon">close</span>
-        </button>
-
-        <div class="todo-container">
-          <!-- project title -->
-          <input type="text" placeholder="Project Title" id="project-title" />
-
-          <div class="todo-items-container">
-            <div class="todo-item-row">
-              <!-- checkbox -->
-              <!-- <span class="material-symbols-outlined">
-                check_box_outline_blank
-              </span> -->
-
-              <!-- <input type="text" placeholder="+ New Item" id="todo-item" />
-
-              
-               <span id="delete-todo-item" class="material-symbols-outlined">
-                delete
-              </span> -->
-            </div>
-          </div>
+    <!-- 
+    ====================TODO FORM CONTAINER FOR INPUT 
+    -->
+    <!-- for backdrop effect overlay used -->
+    <div id="overlay-effect"></div>
+    <div class="todo-form-wrapper hidden">
+      <div class="todo-form-container">
+        <div class="todo-form-head">
+          <!-- TODO HEADER : todo title, close btn -->
+          <input type="text" placeholder="Todo Title" id="todo-title" />
+          <span class="material-symbols-outlined icon" id="close-form-btn"
+            >close</span
+          >
         </div>
 
-        <!-- save button -->
-        <button id="save-btn">Save</button>
-      </dialog>
+        <!-- TODO ITEMS -->
+        <div class="todo-items-container">
+          <!-- <div class="todo-item-row">
+            <input type="checkbox" name="isComplete" class="isComplete" />
+            <input
+              type="text"
+              name="todo-item"
+              placeholder="+ New Item"
+              class="todo-item"
+            />
+            <span
+              class="material-symbols-outlined icon"
+              class="delete-todo-item"
+            >
+              delete
+            </span>
+          </div> -->
+        </div>
+
+        <div class="todo-form-bottom">
+          <button id="save-btn">Save</button>
+        </div>
+      </div>
     </div>
 
-    <!-- MAIN BODY FOR DISPLAYING TODO LISTS -->
-    <main class="main-container"></main>
-
-    <!-- JS MODULE -->
-    <script src="index.js"></script>
+    <!-- 
+    ===================Container FOR DISPLAYING TODO LISTS 
+    -->
+    <div class="display-wrapper">
+      <main class="todo-display-container"></main>
+    </div>
   </body>
 </html>
