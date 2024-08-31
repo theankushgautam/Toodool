@@ -1,7 +1,7 @@
 {
   "name": "toodool",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack --mode development",
@@ -15,6 +15,7 @@
     "@eslint/js": "^9.9.1",
     "clean-webpack-plugin": "^4.0.0",
     "eslint": "^9.9.1",
+    "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
     "html-webpack-plugin": "^5.6.0",
     "webpack": "^5.94.0",

@@ -11,6 +11,8 @@ export class Storage {
 
   // Retrieve all todos from localStorage
   static retrieveAllTodos() {
+    if (localStorage.length < 0) return;
+
     const items = {};
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);

@@ -114,7 +114,6 @@ export class UI {
   //delete item row
   static deleteItemRow() {
     const deleteButtons = document.querySelectorAll('.delete-todo-item');
-    console.log(deleteButtons);
 
     deleteButtons.forEach((btn) => {
       btn.addEventListener('click', (event) => this.removeTodoItem(event));
