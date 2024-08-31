@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* css variables */
+:root {
+  --primary-color: #d6d6d6;
+  --accent-color: rgb(12, 9, 15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.2s, background-color 0.2s;
+
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+
+  font-size: 18px;
+}
+
+.icon {
+  border-radius: 0.3rem;
+  padding: 0.15rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.icon:hover {
+  background-color: rgba(211, 211, 211, 0.479);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+button:active,
+.icon:active {
+  transition: all 0.2s;
+  scale: 0.95;
+}
+
+input[type='checkbox'] {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ==================
+  THEMES
+===========================*/
+.light-mode,
+.light-mode * {
+  --primary-color: #eeeeee;
+  --accent-color: rgb(12, 9, 15);
+}
+
+.dark-mode,
+.dark-mode * {
+  --accent-color: #eeeeee;
+  --primary-color: rgb(12, 9, 15);
+}
+
+/* ==================
+  HEADER
+===========================*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header h2 {
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  box-shadow: 0 0 0.2rem var(--accent-color);
+}
+
+#mode-toggle {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  box-shadow: 0 0 0.2rem var(--accent-color);
+  padding: 0.3rem;
+}
+
+/* ==================
+  TODO FORM INPUT
+===========================*/
+
+.todo-form-wrapper {
+  max-width: 600px;
+  width: 90%;
+  position: absolute;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1; /* Ensure it's behind the modal but above other content */
+}
+
+.todo-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 1.4rem 1rem;
+}
+
+.todo-item,
+#todo-title {
+  color: var(--accent-color);
+  padding: 0.3rem;
+  width: 100%;
+  max-width: 600px;
+  border: none;
+  outline: none;
+  text-overflow: ellipsis;
+}
+
+.todo-form-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+input#todo-title {
+  background-color: transparent;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.todo-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.todo-item {
+  font-size: 1rem;
+  background-color: transparent;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+/* ==================
+  DISPLAY TODO CONTAINER
+===========================*/
+.display-wrapper {
+  margin: 2rem 0;
+}
+
+.todo-display-container {
+  padding: 1rem 0;
+  columns: 5;
+  column-gap: 1.5rem;
+
+  column-width: 250px;
+  break-inside: avoid;
+}
+
+.todo-item-row {
+  margin-bottom: 1.5rem;
+}
+
+.display-card {
+  outline: 2px solid var(--accent-color);
+  border-radius: 0.4rem;
+  padding: 1rem;
+  max-width: 500px;
+  min-width: 200px;
+  margin-bottom: 1rem;
+
+  user-select: none;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.display-card:hover {
+  outline: 4px solid var(--accent-color);
+
+  box-shadow: 0px 0px 15px var(--accent-color);
+  cursor: pointer;
+}
+
+.display-card:active {
+  scale: 0.98;
+}
+
+.display-card h3 {
+  margin-bottom: 1rem;
+}
+
+.display-card ul {
+  list-style: '# ';
+  list-style-position: inside;
+  margin-bottom: 1rem;
+}
+
+.display-card li {
+  margin-bottom: 1rem;
+}
+
+.display-card span {
+  font-size: 0.8rem;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.3em 0.6rem;
+  border-radius: 0.4rem;
+  box-shadow: 0px 0px 4px var(--accent-color);
+}

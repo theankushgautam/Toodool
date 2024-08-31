@@ -1,0 +1,29 @@
+{
+  "name": "toodool",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack --mode development",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^9.9.1",
+    "globals": "^15.9.0",
+    "html-webpack-plugin": "^5.6.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "dependencies": {
+    "css-loader": "^7.1.2",
+    "date-fns": "^3.6.0",
+    "style-loader": "^4.0.0"
+  }
+}
