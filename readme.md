@@ -7,4 +7,4 @@
 ![Screenshot](./src/assets/ss2.png)
 ![Screenshot](./src/assets/ss3.png)
 
-## Live Page Check it out: https://ankush-gautam.github.io/Toodool/
+## Live Page Check it out: https://theankushgautam.github.io/Toodool/
